@@ -1,0 +1,16 @@
+# Git filepatterns to ignore
+
+### VisualStudioCode ###
+.vscode/
+
+### Python ###
+__pycache__/
+
+### Conda ###
+environment
+
+### Pytest ###
+.pytest_cache/
+
+### SQLite ###
+*.db
