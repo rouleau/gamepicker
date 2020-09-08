@@ -21,3 +21,13 @@ class Quotidienne:
         'Quotidienne 2'
         """
         self.name = "Quotidienne " + str(numbers)
+
+
+def main():
+    import doctest
+
+    doctest.testmod(verbose=True)
+
+
+if __name__ == "__main__":
+    main()
