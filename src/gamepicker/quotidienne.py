@@ -21,7 +21,12 @@ class Quotidienne:
         'Quotidienne 2'
         """
         self.name = "Quotidienne " + str(numbers)
-
+        self.payoff_rate = {"Quotidienne 2": "50%", "Quotidienne 3": "45%", "Quotidienne 4": "45%"}
+        self.first_draw = "September 10, 1979"
+        self.draw_frequency = "Daily"
+        self.deadline_wagers = "10:30 p.m. every evening"
+        self.any_order = [0.50, 1, 2, 5, 10]
+        self.exact_order = [0.50, 1, 2, 5, 10]
 
 def main():
     import doctest
