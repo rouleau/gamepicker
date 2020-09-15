@@ -12,3 +12,7 @@ environment
 
 # Visual Studio Code
 .vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/
