@@ -3,7 +3,6 @@ __pycache__/
 
 # Virtual Environments
 
-
 # Unit Tests
 .pytest_cache/
 
