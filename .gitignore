@@ -2,7 +2,7 @@
 __pycache__/
 
 # Virtual Environments
-environment
+
 
 # Unit Tests
 .pytest_cache/
@@ -15,4 +15,6 @@ environment
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Notes
 notebooks/
