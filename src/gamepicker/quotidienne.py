@@ -9,24 +9,26 @@ __copyright__ = "Copyright © 2020 Alain Rouleau. All rights reserved."
 
 class Quotidienne:
     """
-    Create a Quotidienne lottery ticket.
+    Baseclass for a Quotidienne lottery ticket.
     """
 
-    def __init__(self, numbers: int) -> None:
+    def __init__(self) -> None:
         """
-        Initialize a new lottery ticket.
+        Initialize a new base lottery ticket.
 
-        >>> lottery_ticket = Quotidienne(2)
-        >>> lottery_ticket.name            
-        'Quotidienne 2'
+        >>> base_ticket = Quotidienne()
+        >>> base_ticket.name            
+        'Quotidienne'
         """
-        self.name = "Quotidienne " + str(numbers)
-        self.payoff_rate = {"Quotidienne 2": "50%", "Quotidienne 3": "45%", "Quotidienne 4": "45%"}
+        self.name = "Quotidienne"
+        self.active = True
+        self.online = True
         self.first_draw = "September 10, 1979"
         self.draw_frequency = "Daily"
         self.deadline_wagers = "10:30 p.m. every evening"
-        self.any_order = [0.50, 1, 2, 5, 10]
-        self.exact_order = [0.50, 1, 2, 5, 10]
+        self.wager_exact_order = [0, 0.50, 1, 2, 5, 10]
+        self.wager_any_order = [0, 0.50, 1, 2, 5, 10]
+
 
 def main():
     import doctest

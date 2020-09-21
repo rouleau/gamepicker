@@ -1,4 +1,4 @@
-from src.gamepicker.quotidienne import *
+from src.gamepicker.quotidienne import Quotidienne
 
 
 def test_constructor():

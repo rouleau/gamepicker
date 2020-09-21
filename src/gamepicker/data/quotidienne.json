@@ -1,0 +1,39 @@
+{
+  "name": "Quotidienne",
+  "active": true,
+  "online": true,
+  "first_draw": "September 10, 1979",
+  "draw_frequency": "Daily",
+  "deadline_wagers": "10:30 p.m. every evening",
+  "games": [
+    {
+      "name": "Quotidienne 2",
+      "theoretical_payoff_rates": "50%",
+      "grand_prize": "50 times the winning selection cost"
+    },
+    {
+      "name": "Quotidienne 3",
+      "theoretical_payoff_rates": "45%",
+      "grand_prize": "450 times the winning selection cost"
+    },
+    {
+      "name": "Quotidienne 4",
+      "theoretical_payoff_rates": "45%",
+      "grand_prize": "4,500 times the winning selection cost"
+    }
+  ],
+  "wager_exact_order": [
+    "$0.50",
+    "$1",
+    "$2",
+    "$5",
+    "$10"
+  ],
+  "wager_any_order": [
+    "$0.50",
+    "$1",
+    "$2",
+    "$5",
+    "$10"
+  ]
+}
