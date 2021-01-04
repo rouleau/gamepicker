@@ -2,6 +2,7 @@
 __pycache__/
 
 # Virtual Environments
+.venv/
 
 # Unit Tests
 .pytest_cache/
