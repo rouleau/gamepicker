@@ -17,8 +17,8 @@ start_date = "2021-01-04"
 end_date = "2021-03-31"
 list_of_dates = create_dates(start_date, end_date)
 
-# Randomly pick 20-dates from the list of dates
-random_dates = pick_dates(list_of_dates, 20)
+# Randomly pick n-dates from the list of dates
+random_dates = pick_dates(list_of_dates, 35)
 random_dates.sort()
 
 # Print list of dates
