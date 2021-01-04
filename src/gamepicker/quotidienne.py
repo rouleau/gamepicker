@@ -1,15 +1,13 @@
 """
 Quotidienne 2, Quotidienne 3, Quotidienne 4
-"""
 
-__version__ = "0.0.0"
-__author__ = "Alain Rouleau"
-__copyright__ = "Copyright © 2020 Alain Rouleau. All rights reserved."
+"""
 
 
 class Quotidienne:
     """
     Baseclass for a Quotidienne lottery ticket.
+
     """
 
     def __init__(self) -> None:
@@ -19,7 +17,9 @@ class Quotidienne:
         >>> base_ticket = Quotidienne()
         >>> base_ticket.name            
         'Quotidienne'
+
         """
+
         self.name = "Quotidienne"
         self.active = True
         self.online = True

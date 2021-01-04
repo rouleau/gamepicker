@@ -1,8 +1,9 @@
 """
 Read data from JSON file
-"""
-import json
 
+"""
+
+import json
 
 def read_data(json_file: str) -> dict:
     with open(json_file, "r", encoding="utf-8") as read_file:

@@ -8,17 +8,17 @@
   "games": [
     {
       "name": "Quotidienne 2",
-      "theoretical_payoff_rates": "50%",
+      "theoretical_payoff_rate": "50%",
       "grand_prize": "50 times the winning selection cost"
     },
     {
       "name": "Quotidienne 3",
-      "theoretical_payoff_rates": "45%",
+      "theoretical_payoff_rate": "45%",
       "grand_prize": "450 times the winning selection cost"
     },
     {
       "name": "Quotidienne 4",
-      "theoretical_payoff_rates": "45%",
+      "theoretical_payoff_rate": "45%",
       "grand_prize": "4,500 times the winning selection cost"
     }
   ],
