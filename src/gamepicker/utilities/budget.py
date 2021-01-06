@@ -1,15 +1,15 @@
 """
-Bankroll module
+Budget planner
 
 """
-from random import choice
+from random import choice, choices
 
 budget = 100
-bet_amounts = [1, 2, 3, 4, 5]
+bet_amounts = [2, 3, 4, 5]
 
 bets = []
 
-while budget > 0:
+while budget > 2:
     bet = choice(bet_amounts)
     if bet <= budget:
         bets.append(bet)

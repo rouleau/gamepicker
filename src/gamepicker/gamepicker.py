@@ -7,12 +7,12 @@ __version__ = "0.0.0"
 __author__ = "Alain Rouleau"
 __copyright__ = "Copyright © 2021 Alain Rouleau. All rights reserved."
 
-from json_reader import read_data
+from utilities.reader import read_json
 
 
 def main():
     # Open and read the Loto-Quebec games file
-    data = read_data("src/gamepicker/data/Quotidienne.json")
+    data = read_json("data/Quotidienne.json")
     print(data)
 
 

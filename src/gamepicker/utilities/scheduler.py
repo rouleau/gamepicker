@@ -1,5 +1,5 @@
 """
-Date creation module
+Scheduler and date planner
 
 """
 
@@ -37,7 +37,7 @@ def pick_dates(dates: list, num_dates: int):
 
     # Pick random dates from list with first & last day removed
     picked_dates = sample(dates, k=num_dates - 2)
-    
+
     # Add first and last day to final list
     picked_dates.append(first_day)
     picked_dates.append(last_day)
