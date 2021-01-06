@@ -1,9 +1,8 @@
 """
-Data readers for various file formats
-
-"""
+Data readers for various data formats """
 
 import json
+
 
 def read_json(json_file: str) -> dict:
     with open(json_file, "r", encoding="utf-8") as read_file:

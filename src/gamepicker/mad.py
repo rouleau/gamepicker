@@ -1,9 +1,7 @@
 """
 PROJECT: MAD
 
-A program to spend $100 on Espacejeux from January 01, 2021 to March 31, 2021
-
-"""
+Spend $100 on Espacejeux from January 01, 2021 to March 31, 2021 """
 
 __version__ = "0.0.0"
 __author__ = "Alain Rouleau"

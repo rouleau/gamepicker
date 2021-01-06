@@ -1,7 +1,7 @@
 """
-Loto-Québec Game Picker
+PROJECT: GAMEPICKER
 
-"""
+Pick Loto-Québec games on Espacejeux """
 
 __version__ = "0.0.0"
 __author__ = "Alain Rouleau"

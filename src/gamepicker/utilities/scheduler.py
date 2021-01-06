@@ -1,7 +1,5 @@
 """
-Scheduler and date planner
-
-"""
+Scheduler and date planner """
 
 from datetime import date, timedelta
 from random import sample
