@@ -1,44 +1,22 @@
 {
   "games": [
     {
-      "isactive": false,
+      "isactive": true,
       "name": "Holiday Towers",
       "bets": [
         {
-          "cost": 0.5,
-          "theoretical_payoff_rate": 0.93
-        },
-        {
-          "cost": 1,
-          "theoretical_payoff_rate": 0.93
-        },
-        {
-          "cost": 2.5,
-          "theoretical_payoff_rate": 0.93
-        },
-        {
-          "cost": 5,
-          "theoretical_payoff_rate": 0.93
-        },
-        {
-          "cost": 10,
-          "theoretical_payoff_rate": 0.93
-        },
-        {
-          "cost": 15,
-          "theoretical_payoff_rate": 0.93
-        },
-        {
-          "cost": 20,
-          "theoretical_payoff_rate": 0.93
-        },
-        {
-          "cost": 25,
-          "theoretical_payoff_rate": 0.93
-        },
-        {
-          "cost": 50,
-          "theoretical_payoff_rate": 0.93
+          "theoretical_payoff_rate": 0.93,
+          "cost": [
+            0.5,
+            1,
+            2.5,
+            5,
+            10,
+            15,
+            20,
+            25,
+            50
+          ]
         }
       ]
     },
@@ -47,24 +25,14 @@
       "name": "Home for the Holly-Days",
       "bets": [
         {
-          "cost": 0.5,
-          "theoretical_payoff_rate": 0.8705
-        },
-        {
-          "cost": 1,
-          "theoretical_payoff_rate": 0.8705
-        },
-        {
-          "cost": 2,
-          "theoretical_payoff_rate": 0.8705
-        },
-        {
-          "cost": 5,
-          "theoretical_payoff_rate": 0.8705
-        },
-        {
-          "cost": 10,
-          "theoretical_payoff_rate": 0.8705
+          "theoretical_payoff_rate": 0.8705,
+          "cost": [
+            0.5,
+            1,
+            2,
+            5,
+            10
+          ]
         }
       ]
     },
@@ -73,8 +41,10 @@
       "name": "Lotto 6/49 Express",
       "bets": [
         {
-          "cost": 1,
-          "theoretical_payoff_rate": 0.85
+          "theoretical_payoff_rate": 0.85,
+          "cost": [
+            1
+          ]
         }
       ]
     },
@@ -83,24 +53,19 @@
       "name": "Merry Multiplier",
       "bets": [
         {
-          "cost": 1,
-          "theoretical_payoff_rate": 0.85
+          "theoretical_payoff_rate": 0.8479,
+          "cost": [
+            3
+          ]
         },
         {
-          "cost": 2,
-          "theoretical_payoff_rate": 0.85
-        },
-        {
-          "cost": 3,
-          "theoretical_payoff_rate": 0.8479
-        },
-        {
-          "cost": 4,
-          "theoretical_payoff_rate": 0.85
-        },
-        {
-          "cost": 5,
-          "theoretical_payoff_rate": 0.85
+          "theoretical_payoff_rate": 0.85,
+          "cost": [
+            1,
+            2,
+            4,
+            5
+          ]
         }
       ]
     },
@@ -109,8 +74,10 @@
       "name": "Mots cachés 50 years",
       "bets": [
         {
-          "cost": 2,
-          "theoretical_payoff_rate": 0.64
+          "theoretical_payoff_rate": 0.64,
+          "cost": [
+            2
+          ]
         }
       ]
     }
