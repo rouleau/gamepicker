@@ -9,7 +9,8 @@
           "cost": [
             1
           ],
-          "daily_draw": true
+          "daily_draw": true,
+          "draw_days": []
         }
       ]
     },
@@ -27,7 +28,8 @@
             10,
             20
           ],
-          "daily_draw": true
+          "daily_draw": true,
+          "draw_days": []
         }
       ]
     },
@@ -41,7 +43,8 @@
             5,
             10
           ],
-          "daily_draw": true
+          "daily_draw": true,
+          "draw_days": []
         }
       ]
     },
@@ -54,7 +57,8 @@
           "cost": [
             1
           ],
-          "daily_draw": true
+          "daily_draw": true,
+          "draw_days": []
         }
       ]
     },
@@ -100,14 +104,16 @@
           "cost": [
             2
           ],
-          "daily_draw": true
+          "daily_draw": true,
+          "draw_days": []
         },
         {
           "theoretical_payoff_rate": 0.6622,
           "cost": [
             5
           ],
-          "daily_draw": true
+          "daily_draw": true,
+          "draw_days": []
         }
       ]
     },
@@ -155,7 +161,8 @@
             2,
             3
           ],
-          "daily_draw": true
+          "daily_draw": true,
+          "draw_days": []
         }
       ]
     },
@@ -218,7 +225,8 @@
             15,
             20
           ],
-          "daily_draw": true
+          "daily_draw": true,
+          "draw_days": []
         }
       ]
     },
@@ -247,7 +255,8 @@
             15,
             20
           ],
-          "daily_draw": true
+          "daily_draw": true,
+          "draw_days": []
         }
       ]
     },
@@ -276,7 +285,8 @@
             15,
             20
           ],
-          "daily_draw": true
+          "daily_draw": true,
+          "draw_days": []
         }
       ]
     },
@@ -289,14 +299,16 @@
           "cost": [
             2
           ],
-          "daily_draw": true
+          "daily_draw": true,
+          "draw_days": []
         },
         {
           "theoretical_payoff_rate": 0.6328,
           "cost": [
             5
           ],
-          "daily_draw": true
+          "daily_draw": true,
+          "draw_days": []
         }
       ]
     },
@@ -309,7 +321,8 @@
           "cost": [
             2
           ],
-          "daily_draw": true
+          "daily_draw": true,
+          "draw_days": []
         }
       ]
     },
@@ -322,7 +335,8 @@
           "cost": [
             1
           ],
-          "daily_draw": true
+          "daily_draw": true,
+          "draw_days": []
         }
       ]
     }
