@@ -147,18 +147,6 @@
     },
     {
       "isactive": true,
-      "name": "",
-      "bets": [
-        {
-          "theoretical_payoff_rate": 0,
-          "cost": [],
-          "daily_draw": false,
-          "draw_days": []
-        }
-      ]
-    },
-    {
-      "isactive": true,
       "name": "Lotto Poker",
       "bets": [
         {
