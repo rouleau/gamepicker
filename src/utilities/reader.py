@@ -1,5 +1,5 @@
 """
-Data readers for various data formats """
+Data readers for various formats """
 
 import json
 
