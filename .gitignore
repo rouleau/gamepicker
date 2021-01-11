@@ -4,7 +4,7 @@ __pycache__/
 # Virtual Environments
 .venv/
 
-# Unit Tests
+# Tests
 .pytest_cache/
 
 # Data
