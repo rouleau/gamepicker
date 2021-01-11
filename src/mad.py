@@ -22,5 +22,3 @@ random_dates.sort()
 # Print list of dates
 for num, item in enumerate(random_dates, start=1):
     print(num, item.isoformat(), item.strftime("%A, %B %d, %Y"))
-
-# TODO STEP 03: Generate .txt file of days and games
