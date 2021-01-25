@@ -15,13 +15,13 @@ class Quotidienne:
         Initialize a new base lottery ticket.
 
         >>> base_ticket = Quotidienne()
-        >>> base_ticket.name            
+        >>> base_ticket.name
         'Quotidienne'
 
         """
 
         self.name = "Quotidienne"
-        self.active = True
+        self.is_active = True
         self.online = True
         self.first_draw = "September 10, 1979"
         self.draw_frequency = "Daily"
