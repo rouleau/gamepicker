@@ -1,8 +1,8 @@
 {
   "games": [
     {
-      "isactive": true,
       "name": "Holiday Towers",
+      "is_active": true,
       "bets": [
         {
           "theoretical_payoff_rate": 0.93,
@@ -21,8 +21,8 @@
       ]
     },
     {
-      "isactive": true,
       "name": "Home for the Holly-Days",
+      "is_active": true,
       "bets": [
         {
           "theoretical_payoff_rate": 0.8705,
@@ -37,8 +37,8 @@
       ]
     },
     {
-      "isactive": true,
       "name": "Lotto 6/49 Express",
+      "is_active": true,
       "bets": [
         {
           "theoretical_payoff_rate": 0.85,
@@ -49,8 +49,8 @@
       ]
     },
     {
-      "isactive": true,
       "name": "Merry Multiplier",
+      "is_active": true,
       "bets": [
         {
           "theoretical_payoff_rate": 0.8479,
@@ -70,8 +70,8 @@
       ]
     },
     {
-      "isactive": true,
       "name": "Mots cachés 50 years",
+      "is_active": true,
       "bets": [
         {
           "theoretical_payoff_rate": 0.64,

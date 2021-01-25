@@ -1,6 +1,6 @@
 {
   "name": "Quotidienne",
-  "active": true,
+  "is_active": true,
   "online": true,
   "first_draw": "September 10, 1979",
   "draw_frequency": "Daily",
