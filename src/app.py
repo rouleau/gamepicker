@@ -7,10 +7,11 @@ __version__ = "0.0.0"
 __author__ = "Alain Rouleau"
 __copyright__ = "Copyright © 2021 Alain Rouleau. All rights reserved."
 
-import game
-import gamepicker
+from game import LotteryBet, LotteryGame
+from gamepicker import picks
 
-gamepicker.picks()
+picks()
+print()
 
 lottery_bet = {
     "theoretical_payoff_rate": 0.4372,
@@ -19,6 +20,27 @@ lottery_bet = {
     "draw_days": ["Monday", "Thursday"],
 }
 
-bet = game.Bet(lottery_bet)
-print(bet)
+my_bet = LotteryBet(lottery_bet)
+print(my_bet)
 
+lottery_game = {
+    "name": "Lotto :D",
+    "is_active": True,
+    "bets": [
+        {
+            "theoretical_payoff_rate": 0.6259,
+            "cost": [2],
+            "daily_draw": False,
+            "draw_days": ["Monday", "Thursday"],
+        },
+        {
+            "theoretical_payoff_rate": 0.6622,
+            "cost": [5],
+            "daily_draw": True,
+            "draw_days": [],
+        },
+    ],
+}
+
+my_game = LotteryGame(lottery_game)
+print(my_game)
