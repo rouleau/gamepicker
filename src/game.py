@@ -92,7 +92,7 @@ class LotteryGame:
         'Lotto :D'
         >>> game.is_active
         True
-        >>> game.bets # doctest: +ELLIPSIS +NORMALIZE_WHITESPACE
+        >>> game.bets
         [<__main__.LotteryBet object at 0x...>,
          <__main__.LotteryBet object at 0x...>]
 
@@ -227,7 +227,7 @@ class InstantGame:
         'Merry Multiplier'
         >>> game.is_active
         True
-        >>> game.bets # doctest: +ELLIPSIS +NORMALIZE_WHITESPACE
+        >>> game.bets
         [<__main__.InstantBet object at 0x...>,
          <__main__.InstantBet object at 0x...>]
 
@@ -282,13 +282,15 @@ class InstantGame:
         return line_1 + line_2 + line_3
 
 
-def main():
-    """ Main function """
+def test():
+    """ Test function """
 
     import doctest
 
-    doctest.testmod(verbose=True)
+    doctest.testmod(
+        verbose=True, optionflags=doctest.ELLIPSIS | doctest.NORMALIZE_WHITESPACE
+    )
 
 
 if __name__ == "__main__":
-    main()
+    test()
