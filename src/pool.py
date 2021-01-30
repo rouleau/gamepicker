@@ -1,7 +1,7 @@
 """
 Pool module """
 
-from game import LotteryGame
+from game import InstantGame, LotteryGame
 
 
 class GamePool:
@@ -21,7 +21,7 @@ class GamePool:
 
         self.games = []
 
-    def add_games(self, games: list[dict]) -> None:
+    def add_games(self, games: list[dict], category: str) -> None:
         """
         Create and add game objects to the pool object
 
@@ -52,14 +52,17 @@ class GamePool:
         ...     }
         ... ]
         >>> game_pool = GamePool()
-        >>> game_pool.add_games(lotteries)
+        >>> game_pool.add_games(lotteries, "Lottery")
         >>> game_pool.games
         [<game.LotteryGame object at 0x...>,
          <game.LotteryGame object at 0x...>]
-
+        
         """
 
-        self.games = self.games + [LotteryGame(game) for game in games]
+        if category == "Instant":
+            self.games = self.games + [InstantGame(game) for game in games]
+        elif category == "Lottery":
+            self.games = self.games + [LotteryGame(game) for game in games]
 
 
 def test():
