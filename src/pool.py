@@ -25,7 +25,7 @@ class GamePool:
         """
         Create and append game objects to the pool object
 
-        >>> games = [
+        >>> lotteries = [
         ...     {
         ...         "name": "Astro",
         ...         "is_active": True,
@@ -51,14 +51,19 @@ class GamePool:
         ...         ]
         ...     }
         ... ]
+        >>> game_pool = GamePool()
+        >>> game_pool.add_games(lotteries)
+        >>> game_pool.games
+        [<game.LotteryGame object at 0x...>,
+         <game.LotteryGame object at 0x...>]
 
         """
 
-        pass
+        self.games = self.games + [LotteryGame(game) for game in games]
 
 
 def test():
-    """ Test function """
+    """ Doctest function """
 
     import doctest
 

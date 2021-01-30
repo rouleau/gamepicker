@@ -8,6 +8,7 @@ __author__ = "Alain Rouleau"
 __copyright__ = "Copyright © 2021 Alain Rouleau. All rights reserved."
 
 from game import LotteryBet, LotteryGame
+from pool import GamePool
 from gamepicker import picks
 
 picks()
@@ -42,6 +43,9 @@ lottery_game = {
     ],
 }
 
+my_game = LotteryGame(lottery_game)
+print(my_game)
+
 lotteries = [
     {
         "name": "Astro",
@@ -69,6 +73,11 @@ lotteries = [
     },
 ]
 
+my_game_pool = GamePool()
+print(my_game_pool.games)
 
-my_game = LotteryGame(lottery_game)
-print(my_game)
+my_game_pool.add_games(lotteries)
+print(my_game_pool.games)
+
+for game in my_game_pool.games:
+    print(game)
