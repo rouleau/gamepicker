@@ -283,7 +283,7 @@ class InstantGame:
 
 
 def test():
-    """ Test function """
+    """ Doctest function """
 
     import doctest
 
