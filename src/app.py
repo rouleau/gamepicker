@@ -54,7 +54,7 @@ lotteries = [
         "is_active": True,
         "bets": [
             {
-                "theoretical_payoff_rate": 0.48,
+                "theoretical_payoff_rate": 0.93,
                 "cost": [5],
                 "daily_draw": False,
                 "draw_days": ["Tuesday", "Friday"],
@@ -69,3 +69,6 @@ my_game_pool.add_games(lotteries, "Lottery")
 
 for game in my_game_pool.games:
     print(game)
+
+theoretical_payoff_rates = my_game_pool.payoff_rates()
+print(theoretical_payoff_rates)
