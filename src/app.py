@@ -42,5 +42,33 @@ lottery_game = {
     ],
 }
 
+lotteries = [
+    {
+        "name": "Astro",
+        "is_active": True,
+        "bets": [
+            {
+                "theoretical_payoff_rate": 0.4372,
+                "cost": [1],
+                "daily_draw": True,
+                "draw_days": [],
+            }
+        ],
+    },
+    {
+        "name": "Lotto Max",
+        "is_active": True,
+        "bets": [
+            {
+                "theoretical_payoff_rate": 0.48,
+                "cost": [5],
+                "daily_draw": False,
+                "draw_days": ["Tuesday", "Friday"],
+            }
+        ],
+    },
+]
+
+
 my_game = LotteryGame(lottery_game)
 print(my_game)
