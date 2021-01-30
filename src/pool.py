@@ -23,7 +23,7 @@ class GamePool:
 
     def add_games(self, games: list[dict]) -> None:
         """
-        Create and append game objects to the pool object
+        Create and add game objects to the pool object
 
         >>> lotteries = [
         ...     {
