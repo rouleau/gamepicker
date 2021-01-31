@@ -279,13 +279,11 @@ class LotteryGame:
 
 
 def test():
-    """ Doctest function """
-
+    """ Test docstrings using doctest """
     import doctest
 
-    doctest.testmod(
-        verbose=True, optionflags=doctest.ELLIPSIS | doctest.NORMALIZE_WHITESPACE
-    )
+    flags = doctest.ELLIPSIS | doctest.NORMALIZE_WHITESPACE
+    doctest.testmod(verbose=True, optionflags=flags)
 
 
 if __name__ == "__main__":
