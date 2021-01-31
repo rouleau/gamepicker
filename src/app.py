@@ -22,5 +22,6 @@ my_game_pool.add_games(lotteries, "Lottery")
 # Display all games and bets in the game pool
 print(my_game_pool)
 
-# theoretical_payoff_rates = my_game_pool.payoff_rates()
-# print(theoretical_payoff_rates)
+# Pick a random payoff rate based on weight
+theoretical_payoff_rates = my_game_pool.payoff_rates()
+print(theoretical_payoff_rates)
