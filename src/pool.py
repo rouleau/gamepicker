@@ -183,6 +183,7 @@ class GamePool:
 
 def test():
     """ Test docstrings using doctest """
+    
     import doctest
 
     flags = doctest.ELLIPSIS | doctest.NORMALIZE_WHITESPACE
