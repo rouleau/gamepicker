@@ -65,6 +65,7 @@ class GamePool:
         Name: Astro
         Active: True
         Bet 1
+        Available: True
         Theoretical Payoff Rate: 0.4372
         Cost: [1, 2, 5]
         Daily Draw: True
@@ -74,11 +75,13 @@ class GamePool:
         Name: Lotto Max
         Active: True
         Bet 1
+        Available: ...
         Theoretical Payoff Rate: 0.48
         Cost: [5]
         Daily Draw: False
         Draw Days: ['Tuesday', 'Friday']
         Bet 2
+        Available: ...
         Theoretical Payoff Rate: 0.495
         Cost: [10]
         Daily Draw: False
