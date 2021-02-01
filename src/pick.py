@@ -1,8 +1,6 @@
 """
 Pick module """
 
-import random
-
 
 class Picker:
     """ Create a picker object for picking bets """
