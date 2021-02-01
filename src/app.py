@@ -8,7 +8,6 @@ __author__ = "Alain Rouleau"
 __copyright__ = "Copyright © 2021 Alain Rouleau. All rights reserved."
 
 from event import Schedule
-from pick import Picker
 from pool import GamePool
 from utilities.reader import read_json
 
@@ -38,11 +37,12 @@ schedule = Schedule("2021-02-01", "2021-04-30")
 print()
 print(schedule.dates)
 
+# Create and display a list of 30 random date objects
 random_dates = schedule.random_dates(30)
 print()
 print(random_dates)
 
-# Print list of dates
+# Display the list of 30 random date objects as strings
 print()
 for num, item in enumerate(random_dates, start=1):
     print(num, item.isoformat(), item.strftime("%A, %B %d, %Y"))
