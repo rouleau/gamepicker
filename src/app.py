@@ -28,9 +28,9 @@ print(my_game_pool)
 theoretical_payoff_rates = my_game_pool.payoff_rates()
 print(theoretical_payoff_rates)
 
-# Pick a random payoff rate based on weight
-picker = Picker()
-payoff_rate = picker.payoff_rate(theoretical_payoff_rates)
+# Display a payoff rate based on randomness and weight from the set of
+# theoretical payoff rates from all bets
+payoff_rate = my_game_pool.payoff_rate()
 print(f"Payoff Rate: {payoff_rate}")
 
 # Create a schedule
@@ -41,3 +41,8 @@ print(schedule.dates)
 random_dates = schedule.random_dates(30)
 print()
 print(random_dates)
+
+# Print list of dates
+print()
+for num, item in enumerate(random_dates, start=1):
+    print(num, item.isoformat(), item.strftime("%A, %B %d, %Y"))
