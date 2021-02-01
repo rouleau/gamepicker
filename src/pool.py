@@ -1,6 +1,7 @@
 """
 Game Pool module """
 
+import random
 from game import InstantGame, LotteryGame
 
 
@@ -183,10 +184,59 @@ class GamePool:
 
         return sorted(theoretical_payoff_rates)
 
+    def payoff_rate(self) -> float:
+        """
+        Return a payoff rate based on randomness and weight from the set of
+        theoretical payoff rates from all bets
+
+        >>> instants = [
+        ...     {
+        ...         "name": "Holiday Towers",
+        ...         "is_active": True,
+        ...         "bets": [
+        ...             {
+        ...                 "theoretical_payoff_rate": 0.93,
+        ...                 "cost": [0.5, 1, 2.5, 5],
+        ...             },
+        ...             {
+        ...                 "theoretical_payoff_rate": 0.8705,
+        ...                 "cost": [10, 15, 20],
+        ...             },
+        ...         ],
+        ...     },
+        ...     {
+        ...         "name": "Home for the Holly-Days",
+        ...         "is_active": True,
+        ...         "bets": [
+        ...             {
+        ...                 "theoretical_payoff_rate": 0.8705,
+        ...                 "cost": [0.5, 1, 2],
+        ...             },
+        ...             {
+        ...                 "theoretical_payoff_rate": 0.62,
+        ...                 "cost": [5, 10],
+        ...             },
+        ...         ],
+        ...     },
+        ... ]
+        >>> game_pool = GamePool()
+        >>> game_pool.add_games(instants, "Instant")
+        >>> game_pool.payoff_rates()
+        [0.62, 0.8705, 0.93]
+        >>> game_pool.payoff_rate() # doctest: +SKIP
+        0.8705
+
+        """
+
+        payoff_rates = self.payoff_rates()
+        payoff_rate = random.choices(payoff_rates, weights=payoff_rates, k=1)
+
+        return payoff_rate[0]
+
 
 def test():
     """ Test docstrings using doctest """
-    
+
     import doctest
 
     flags = doctest.ELLIPSIS | doctest.NORMALIZE_WHITESPACE
