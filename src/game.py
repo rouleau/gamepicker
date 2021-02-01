@@ -1,6 +1,8 @@
 """
 Game module """
 
+from datetime import datetime
+
 
 class InstantBet:
     """ Create an Instant bet object from a dict """
@@ -14,6 +16,9 @@ class InstantBet:
         ...     "cost": [0.5, 1, 2, 5, 10]
         ... }
         >>> bet = InstantBet(instant_bet)
+        >>> bet
+        <__main__.InstantBet object at 0x...>
+        >>> bet.is_available
         >>> bet.theoretical_payoff_rate
         0.8705
         >>> bet.cost
@@ -21,6 +26,7 @@ class InstantBet:
 
         """
 
+        self.is_available = None
         self.theoretical_payoff_rate = instant_bet["theoretical_payoff_rate"]
         self.cost = instant_bet["cost"]
 
@@ -36,15 +42,17 @@ class InstantBet:
         ... }
         >>> bet = InstantBet(instant_bet)
         >>> print(bet)
+        Available: None
         Theoretical Payoff Rate: 0.8705
         Cost: [0.5, 1, 2, 5, 10]
 
         """
 
-        line_1 = f"Theoretical Payoff Rate: {self.theoretical_payoff_rate}\n"
-        line_2 = f"Cost: {self.cost}\n"
+        line_1 = f"Available: {self.is_available}\n"
+        line_2 = f"Theoretical Payoff Rate: {self.theoretical_payoff_rate}\n"
+        line_3 = f"Cost: {self.cost}\n"
 
-        return line_1 + line_2
+        return line_1 + line_2 + line_3
 
 
 class InstantGame:
@@ -69,6 +77,8 @@ class InstantGame:
         ...     ],
         ... }
         >>> game = InstantGame(instant_game)
+        >>> game
+        <__main__.InstantGame object at 0x...>
         >>> game.name
         'Merry Multiplier'
         >>> game.is_active
@@ -81,7 +91,12 @@ class InstantGame:
 
         self.name = instant_game["name"]
         self.is_active = instant_game["is_active"]
-        self.bets = [InstantBet(bet) for bet in instant_game["bets"]]
+        self.bets = []
+
+        for bet in instant_game["bets"]:
+            bet = InstantBet(bet)
+            bet.is_available = self.is_active
+            self.bets.append(bet)
 
     def __str__(self) -> str:
         """
@@ -108,9 +123,11 @@ class InstantGame:
         Name: Merry Multiplier
         Active: True
         Bet 1
+        Available: True
         Theoretical Payoff Rate: 0.8479
         Cost: [3]
         Bet 2
+        Available: True
         Theoretical Payoff Rate: 0.85
         Cost: [1, 2, 4, 5]
 
@@ -141,6 +158,9 @@ class LotteryBet:
         ...     "draw_days": ["Monday", "Thursday"]
         ... }
         >>> bet = LotteryBet(lottery_bet)
+        >>> bet
+        <__main__.LotteryBet object at 0x...>
+        >>> bet.is_available
         >>> bet.theoretical_payoff_rate
         0.4372
         >>> bet.cost
@@ -152,6 +172,7 @@ class LotteryBet:
 
         """
 
+        self.is_available = None
         self.theoretical_payoff_rate = lottery_bet["theoretical_payoff_rate"]
         self.cost = lottery_bet["cost"]
         self.daily_draw = lottery_bet["daily_draw"]
@@ -171,6 +192,7 @@ class LotteryBet:
         ... }
         >>> bet = LotteryBet(lottery_bet)
         >>> print(bet)
+        Available: None
         Theoretical Payoff Rate: 0.4372
         Cost: [1, 2, 4, 5, 10, 20]
         Daily Draw: False
@@ -178,12 +200,13 @@ class LotteryBet:
 
         """
 
-        line_1 = f"Theoretical Payoff Rate: {self.theoretical_payoff_rate}\n"
-        line_2 = f"Cost: {self.cost}\n"
-        line_3 = f"Daily Draw: {self.daily_draw}\n"
-        line_4 = f"Draw Days: {self.draw_days}\n"
+        line_1 = f"Available: {self.is_available}\n"
+        line_2 = f"Theoretical Payoff Rate: {self.theoretical_payoff_rate}\n"
+        line_3 = f"Cost: {self.cost}\n"
+        line_4 = f"Daily Draw: {self.daily_draw}\n"
+        line_5 = f"Draw Days: {self.draw_days}\n"
 
-        return line_1 + line_2 + line_3 + line_4
+        return line_1 + line_2 + line_3 + line_4 + line_5
 
 
 class LotteryGame:
@@ -212,6 +235,8 @@ class LotteryGame:
         ...     ],
         ... }
         >>> game = LotteryGame(lottery_game)
+        >>> game
+        <__main__.LotteryGame object at 0x...>
         >>> game.name
         'Lotto :D'
         >>> game.is_active
@@ -224,7 +249,24 @@ class LotteryGame:
 
         self.name = lottery_game["name"]
         self.is_active = lottery_game["is_active"]
-        self.bets = [LotteryBet(bet) for bet in lottery_game["bets"]]
+        self.bets = []
+
+        today = datetime.now().strftime("%A")
+
+        for bet in lottery_game["bets"]:
+            bet = LotteryBet(bet)
+
+            # Determine if lottery bet is available today
+            if not self.is_active:
+                bet.is_available = False
+            elif bet.daily_draw:
+                bet.is_available = True
+            elif today in bet.draw_days:
+                bet.is_available = True
+            else:
+                bet.is_available = False
+
+            self.bets.append(bet)
 
     def __str__(self) -> str:
         """
@@ -255,11 +297,13 @@ class LotteryGame:
         Name: Lotto :D
         Active: True
         Bet 1
+        Available: ...
         Theoretical Payoff Rate: 0.6259
         Cost: [2]
         Daily Draw: False
         Draw Days: ['Monday', 'Thursday']
         Bet 2
+        Available: True
         Theoretical Payoff Rate: 0.6622
         Cost: [5]
         Daily Draw: True
@@ -280,7 +324,7 @@ class LotteryGame:
 
 def test():
     """ Test docstrings using doctest """
-    
+
     import doctest
 
     flags = doctest.ELLIPSIS | doctest.NORMALIZE_WHITESPACE
