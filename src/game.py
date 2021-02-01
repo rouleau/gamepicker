@@ -32,8 +32,8 @@ class InstantBet:
 
     def __str__(self) -> str:
         """
-        Return a string representation of the Instant bet object which
-        includes the theoretical payoff rate and cost by overriding the
+        Return a string representation of the Instant bet object which includes
+        if available, the theoretical payoff rate and cost by overriding the
         __str__ method.
 
         >>> instant_bet = {
@@ -180,9 +180,9 @@ class LotteryBet:
 
     def __str__(self) -> str:
         """
-        Return a string representation of the lottery bet object which
-        includes the theoretical payoff rate, cost, daily draw, and draw days
-        by overriding the __str__ method.
+        Return a string representation of the lottery bet object which includes
+        if available, the theoretical payoff rate, cost, daily draw, and
+        draw days by overriding the __str__ method.
 
         >>> lottery_bet = {
         ...     "theoretical_payoff_rate": 0.4372,
