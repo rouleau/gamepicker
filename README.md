@@ -7,7 +7,10 @@ Author: Alain Rouleau
 
 Project Notes:
 - Pre-production
-- Subject to major revisions without notice<br><br>
+- Subject to major revisions without notice<br>
+
+Usage:
+- Run as python -m gamepicker<br><br>
 
 ---
 
