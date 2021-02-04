@@ -8,8 +8,8 @@ def app():
     from utilities.data import read_json
 
     # Read games from JSON files
-    instants = read_json("../data/instants.json")["games"]
-    lotteries = read_json("../data/lotteries.json")["games"]
+    instants = read_json("../data/games/instants.json")["games"]
+    lotteries = read_json("../data/games/lotteries.json")["games"]
 
     # Create and add game objects to a game pool object
     my_game_pool = GamePool()
