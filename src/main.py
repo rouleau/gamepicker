@@ -1,17 +1,11 @@
 """
-PROJECT: GAMEPICKER
-
-An advanced toolkit for selecting Loto-Québec games """
-
-__version__ = "0.0.0"
-__author__ = "Alain Rouleau"
-__copyright__ = "Copyright © 2021 Alain Rouleau. All rights reserved."
+Main module for application """
 
 
-def main():
+def app():
     from event import Schedule
     from pool import GamePool
-    from utilities.reader import read_json
+    from utilities.data import read_json
 
     # Read games from JSON files
     instants = read_json("../data/instants.json")["games"]
@@ -49,6 +43,9 @@ def main():
     for num, item in enumerate(random_dates, start=1):
         print(num, item.isoformat(), item.strftime("%A, %B %d, %Y"))
 
+    # Start Game Picker
+    print("\nWelcome to the Espacejeux Game Picker!\n")
+
 
 if __name__ == "__main__":
-    main()
+    app()
