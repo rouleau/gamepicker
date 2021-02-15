@@ -60,6 +60,40 @@ class Schedule:
 
         return sorted(random_dates)
 
+    def random_dates_to_str(self, num_dates: int = 2) -> list[str]:
+        """
+        Return a sorted list of a specified number of random dates
+        from start date to end date (inclusive)
+
+        >>> schedule = Schedule("2021-02-15", "2021-04-30")
+        >>> random_dates = schedule.random_dates_to_str(5)
+        >>> random_dates
+        ['2021-02-15 Monday, February 15, 2021', ..., ..., ...,
+         '2021-04-30 Friday, April 30, 2021']
+
+        """
+
+        # Create list of random date objects
+        dates = self.random_dates(num_dates)
+
+        # Create list of strings from list of random date objects
+        random_dates = []
+
+        for date in dates:
+            date = date.isoformat() + " " + date.strftime("%A, %B %d, %Y")
+            random_dates.append(date)
+
+        return random_dates
+
+    # TODO
+    def random_dates_to_csv(self, num_dates: int = 2):
+        """
+        Output a CSV file of random dates to folder data\\datetime
+
+        """
+
+        pass
+
 
 def test():
     """ Test docstrings using doctest """
