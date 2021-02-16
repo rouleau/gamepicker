@@ -44,6 +44,13 @@ def app():
     for random_date in random_dates:
         print(random_date)
 
+    # Create and write a list of 30 random dates to a CSV file in the
+    # datetime sub-folder of the data folder
+    print()
+    print("Writing to CSV file...")
+    schedule.random_dates_to_csv(30)
+    print("Done!")
+
     # Start Game Picker
     print("\nWelcome to the Espacejeux Game Picker!\n")
 
