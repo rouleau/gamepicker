@@ -1,6 +1,8 @@
 """
 Event module """
 
+import csv
+
 from datetime import date, timedelta
 from random import sample
 
@@ -35,8 +37,8 @@ class Schedule:
 
     def random_dates(self, num_dates: int = 2) -> list[date]:
         """
-        Return a sorted list of a specified number of random dates
-        from start date to end date (inclusive)
+        Return a sorted list of randomly selected date objects from the dates
+        in the schedule which includes the start and end date
 
         >>> schedule = Schedule("2021-01-01", "2021-03-31")
         >>> random_dates = schedule.random_dates(5)
@@ -62,8 +64,8 @@ class Schedule:
 
     def random_dates_to_str(self, num_dates: int = 2) -> list[str]:
         """
-        Return a sorted list of a specified number of random dates
-        from start date to end date (inclusive)
+        Return a sorted list of strings from randomly selected date objects
+        from the dates in the schedule which includes the start and end date
 
         >>> schedule = Schedule("2021-02-15", "2021-04-30")
         >>> random_dates = schedule.random_dates_to_str(5)
@@ -73,10 +75,10 @@ class Schedule:
 
         """
 
-        # Create list of random date objects
+        # Create a list of random date objects
         dates = self.random_dates(num_dates)
 
-        # Create list of strings from list of random date objects
+        # Create a list of strings from list of random date objects
         random_dates = []
 
         for date in dates:
@@ -85,14 +87,38 @@ class Schedule:
 
         return random_dates
 
-    # TODO
     def random_dates_to_csv(self, num_dates: int = 2):
         """
-        Output a CSV file of random dates to folder data\\datetime
+        Write a CSV file of sorted dates to the datetime sub-folder of the
+        data folder from randomly selected date objects from the dates in the
+        schedule which includes the start and end date
+
+        >>> schedule = Schedule("2021-02-15", "2021-04-30")
+        >>> schedule.random_dates_to_csv(30)  # doctest: +SKIP
 
         """
 
-        pass
+        # Create a list of random date objects
+        dates = self.random_dates(num_dates)
+
+        # Create a string for each date object, split the string, append the
+        # returned list of strings to another list resulting in a list of lists
+        random_dates = []
+
+        for date in dates:
+            date = date.isoformat() + ", " + date.strftime("%A, %B, %d, %Y")
+            date = date.split(",")
+            random_dates.append(date)
+
+        # Create a CSV file, write a header, write the random dates
+        filename = "../data/datetime/random_dates.csv"
+
+        with open(filename, "w", newline="", encoding="utf-8") as file:
+            writer = csv.writer(file)
+            writer.writerow(["ISO 8601 Format", " Weekday", " Month", " Day", " Year"])
+
+            for date in random_dates:
+                writer.writerow(date)
 
 
 def test():
