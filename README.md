@@ -14,4 +14,5 @@ Usage:
 
 ---
 
-Copyright © 2021 Alain Rouleau. All rights reserved.
+Copyright © 2021 Alain Rouleau. All rights reserved.<br><br>
+This project is licensed under the terms of the MIT license.
