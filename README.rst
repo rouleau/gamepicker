@@ -15,6 +15,8 @@ Project Notes
 Usage
 -----
 
+Run as:
+
 .. code-block:: text
 
     $ python -m gamepicker
@@ -37,7 +39,5 @@ Disclaimer
 
 This project is not associated with Loto-Québec or any of its
 subsidiaries or affiliates.
-
-----
 
 Copyright © 2021 Alain Rouleau. All rights reserved.
