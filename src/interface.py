@@ -2,8 +2,7 @@
 Interface module
 
 """
-
-from constants.menus import MAIN, SCHEDULE
+from constants.menus import MAIN
 
 
 def menu(menu_to_print: dict = MAIN) -> int:
@@ -17,27 +16,26 @@ def menu(menu_to_print: dict = MAIN) -> int:
     ...     3: "Pick games",
     ... }
     >>> menu_selection = menu(MAIN)  # doctest: +SKIP
-
     Welcome to Game Picker!
-
-    Select:
+    -----------------------
 
     [1] Create a schedule
     [2] Create a budget
     [3] Pick games
 
     > 2
+
     >>> menu_selection  # doctest: +SKIP
     2
 
     """
-
     header = menu_to_print.pop("header")
 
-    print()
     print(header)
-    print()
-    print("Select:")
+
+    if menu_to_print != MAIN:
+        print("-" * len(header))
+
     print()
 
     for key, value in menu_to_print.items():
@@ -45,7 +43,32 @@ def menu(menu_to_print: dict = MAIN) -> int:
 
     selection = input("\n> ")
 
+    print()
+
     return int(selection)
+
+
+def menu_exit() -> None:
+    """
+    Print exit message for menus
+
+    >>> menu_exit()
+    Goodbye!
+
+    """
+    print("Goodbye!")
+
+
+def menu_invalid(selection: int) -> None:
+    """
+    Print invalid message for menus
+
+    >>> selection = 3
+    >>> menu_invalid(selection)
+    Option 3 is Invalid... Goodbye!
+
+    """
+    print(f"Option {selection} is Invalid... Goodbye!")
 
 
 def test():
