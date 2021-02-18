@@ -23,6 +23,8 @@ def main():
 
     if selection == 1:  # GAMES
 
+        # TODO selections\games.py
+
         # Read games from JSON files
         instants = read_json("../data/games/instants.json")["games"]
         lotteries = read_json("../data/games/lotteries.json")["games"]
@@ -61,6 +63,8 @@ def main():
 
     elif selection == 2:  # BUDGET
 
+        # TODO selections\budget.py
+
         # Print BUDGET menu and return selection
         selection = menu(BUDGET)
 
@@ -76,6 +80,8 @@ def main():
             menu_invalid(selection)
 
     elif selection == 3:  # SCHEDULE
+
+        # TODO selections\schedule.py
 
         # Print SCHEDULE menu and return selection
         selection = menu(SCHEDULE)
