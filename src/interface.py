@@ -1,0 +1,61 @@
+"""
+Interface module
+
+"""
+
+from constants.menus import MAIN, SCHEDULE
+
+
+def menu(menu_to_print: dict = MAIN) -> int:
+    """
+    Print the menu and return the selection
+
+    >>> MAIN = {
+    ...     "header": "Welcome to Game Picker!",
+    ...     1: "Create a schedule",
+    ...     2: "Create a budget",
+    ...     3: "Pick games",
+    ... }
+    >>> menu_selection = menu(MAIN)  # doctest: +SKIP
+
+    Welcome to Game Picker!
+
+    Select:
+
+    [1] Create a schedule
+    [2] Create a budget
+    [3] Pick games
+
+    > 2
+    >>> menu_selection  # doctest: +SKIP
+    2
+
+    """
+
+    header = menu_to_print.pop("header")
+
+    print()
+    print(header)
+    print()
+    print("Select:")
+    print()
+
+    for key, value in menu_to_print.items():
+        print(f"[{key}] {value}")
+
+    selection = input("\n> ")
+
+    return int(selection)
+
+
+def test():
+    """ Test docstrings using doctest """
+
+    import doctest
+
+    flags = doctest.ELLIPSIS | doctest.NORMALIZE_WHITESPACE
+    doctest.testmod(verbose=True, optionflags=flags)
+
+
+if __name__ == "__main__":
+    test()
