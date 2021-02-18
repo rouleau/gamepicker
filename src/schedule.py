@@ -1,5 +1,7 @@
 """
-Event module """
+Scedule module
+
+"""
 
 import csv
 
