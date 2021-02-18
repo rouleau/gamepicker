@@ -12,6 +12,6 @@ __version__ = "0.0.0"
 __author__ = "Alain Rouleau"
 __copyright__ = "Copyright © 2021 Alain Rouleau. All rights reserved."
 
-import main
+import app
 
-main.app()
+app.main()
