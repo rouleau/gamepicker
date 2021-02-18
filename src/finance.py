@@ -1,5 +1,7 @@
 """
-Finance module """
+Finance module
+
+"""
 
 from datetime import datetime
 

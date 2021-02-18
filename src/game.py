@@ -1,5 +1,7 @@
 """
-Game module """
+Game module
+
+"""
 
 from datetime import datetime
 
