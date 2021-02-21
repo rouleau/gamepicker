@@ -1,9 +1,7 @@
 """
-Finance module
+Budget module
 
 """
-
-from datetime import datetime
 
 
 class Budget:
