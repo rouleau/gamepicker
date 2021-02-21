@@ -2,18 +2,13 @@
 
 
 def main():
-    """
-    Main function for the gamepicker application
+    """ Main function for the gamepicker application """
 
-    """
     from constants.menus import BUDGET, GAMES, MAIN, SCHEDULE, SCHEDULE_SUB_MENU
     from menu import Menu
     from pool import GamePool
     from schedule import Schedule
     from utilities.data import read_json
-
-    # START GAME PICKER
-    print()
 
     # Create menus
     main_menu = Menu(MAIN)
@@ -23,6 +18,7 @@ def main():
     schedule_sub_menu = Menu(SCHEDULE_SUB_MENU)
 
     # Print MAIN menu and get selection
+    print()
     selection = main_menu.get_selection()
 
     if selection == 1:  # GAMES
