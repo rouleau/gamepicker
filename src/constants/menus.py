@@ -9,8 +9,8 @@ MAIN = {
     3: "Schedule",
 }
 
-GAME = {
-    "header": "GAME",
+GAMES = {
+    "header": "GAMES",
     1: "Print games",
 }
 
