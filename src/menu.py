@@ -53,10 +53,10 @@ class Menu:
         <BLANKLINE>
 
         """
-        # Create a header string
+        # Create string for header
         header = self.header + "\n\n"
 
-        # Create a selections string
+        # Create string for selections
         selections = ""
         for key, value in self.selections.items():
             selections = selections + f"[{key}] {value}\n"
