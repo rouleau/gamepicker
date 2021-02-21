@@ -21,6 +21,10 @@ Run as:
 
     $ python -m gamepicker
 
+.. image:: img/espacejeux_gamepicker.png
+  :width: 400
+  :alt: Espacejeux Game Picker
+
 Links
 -----
 
