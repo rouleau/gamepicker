@@ -58,7 +58,6 @@ class Menu:
 
         # Create a selections string
         selections = ""
-
         for key, value in self.selections.items():
             selections = selections + f"[{key}] {value}\n"
 
