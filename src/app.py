@@ -56,10 +56,10 @@ def main():
             print(f"Payoff Rate: {payoff_rate} (randomly selected based on weight)")
 
         elif selection == 0:  # Print exit message
-            print(game_menu.messages["exit"])
+            game_menu.print_message("exit")
 
         else:  # Print invalid selection message
-            print(game_menu.messages["invalid"])
+            game_menu.print_message("invalid")
 
     elif selection == 2:  # BUDGET
 
@@ -74,10 +74,10 @@ def main():
             print("Creating budget...")
 
         elif selection == 0:  # Print exit message
-            print(budget_menu.messages["exit"])
+            budget_menu.print_message("exit")
 
         else:  # Print invalid selection message
-            print(budget_menu.messages["invalid"])
+            budget_menu.print_message("invalid")
 
     elif selection == 3:  # SCHEDULE
 
@@ -126,22 +126,22 @@ def main():
                 print("Done!")
 
             elif selection == 0:  # Print exit message
-                print(schedule_sub_menu.messages["exit"])
+                schedule_sub_menu.print_message("exit")
 
             else:  # Print invalid selection message
-                print(schedule_sub_menu.messages["invalid"])
+                schedule_sub_menu.print_message("invalid")
 
         elif selection == 0:  # Print exit message
-            print(schedule_menu.messages["exit"])
+            schedule_menu.print_message("exit")
 
         else:  # Print invalid selection message
-            print(schedule_menu.messages["invalid"])
+            schedule_menu.print_message("invalid")
 
     elif selection == 0:  # Print exit message
-        print(main_menu.messages["exit"])
+        main_menu.print_message("exit")
 
     else:  # Print invalid selection message
-        print(main_menu.messages["invalid"])
+        main_menu.print_message("invalid")
 
 
 if __name__ == "__main__":
