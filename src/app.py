@@ -12,7 +12,7 @@ def main():
 
     # Create menus
     main_menu = Menu(MAIN)
-    game_menu = Menu(GAMES)
+    games_menu = Menu(GAMES)
     budget_menu = Menu(BUDGET)
     schedule_menu = Menu(SCHEDULE)
     schedule_sub_menu = Menu(SCHEDULE_SUB_MENU)
@@ -35,7 +35,7 @@ def main():
         game_pool.add_games(lotteries, "Lottery")
 
         # Print GAME menu and get selection
-        selection = game_menu.get_selection()
+        selection = games_menu.get_selection()
 
         if selection == 1:  # Print Games
 
@@ -56,10 +56,10 @@ def main():
             print(f"Payoff Rate: {payoff_rate} (randomly selected based on weight)")
 
         elif selection == 0:  # Print exit message
-            game_menu.print_message("exit")
+            games_menu.print_message("exit")
 
         else:  # Print invalid selection message
-            game_menu.print_message("invalid")
+            games_menu.print_message("invalid")
 
     elif selection == 2:  # BUDGET
 
