@@ -2,7 +2,6 @@
 Data utilities for various formats
 
 """
-
 import json
 
 
