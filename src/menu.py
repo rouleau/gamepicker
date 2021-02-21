@@ -12,23 +12,31 @@ class Menu:
         Initialize the menu object
 
         >>> MAIN = {
-        ...     "header": "Welcome to the Espacejeux Game Picker!",
+        ...     "header": "Welcome to Game Picker!",
         ...     1: "Games",
         ...     2: "Budget",
         ...     3: "Schedule",
-        ...     4: "Exit",
         ... }
         >>> main_menu = Menu(MAIN)
         >>> main_menu
         <__main__.Menu object at 0x...>
         >>> main_menu.header
-        'Welcome to the Espacejeux Game Picker!'
+        'Welcome to Game Picker!'
         >>> main_menu.selections
-        {1: 'Games', 2: 'Budget', 3: 'Schedule', 4: 'Exit'}
+        {1: 'Games', 2: 'Budget', 3: 'Schedule', 0: 'Exit'}
+        >>> main_menu.messages
+        {'exit': 'Goodbye!', 'invalid': 'Selection is invalid... Goodbye!'}
 
         """
+        # Add exit to end of menu
+        menu[0] = "Exit"
+
         self.header: str = menu.pop("header")
         self.selections: dict = menu
+        self.messages: dict = {
+            "exit": "Goodbye!",
+            "invalid": "Selection is invalid... Goodbye!",
+        }
 
     def __str__(self) -> str:
         """
@@ -36,20 +44,19 @@ class Menu:
         header and selections by overriding the __str__ method.
 
         >>> MAIN = {
-        ...     "header": "Welcome to the Espacejeux Game Picker!",
+        ...     "header": "Welcome to Game Picker!",
         ...     1: "Games",
         ...     2: "Budget",
         ...     3: "Schedule",
-        ...     4: "Exit",
         ... }
         >>> main_menu = Menu(MAIN)
         >>> print(main_menu)
-        Welcome to the Espacejeux Game Picker!
+        Welcome to Game Picker!
         <BLANKLINE>
         [1] Games
         [2] Budget
         [3] Schedule
-        [4] Exit
+        [0] Exit
         <BLANKLINE>
 
         """
@@ -62,6 +69,37 @@ class Menu:
             selections = selections + f"[{key}] {value}\n"
 
         return header + selections
+
+    def get_selection(self) -> int:
+        """
+        Print menu and return selection
+
+        >>> MAIN = {
+        ...     "header": "Welcome to Game Picker!",
+        ...     1: "Games",
+        ...     2: "Budget",
+        ...     3: "Schedule",
+        ... }
+        >>> main_menu = Menu(MAIN)
+        >>> selection = main_menu.get_selection()  # doctest: +SKIP
+        Welcome to Game Picker!
+
+        [1] Games
+        [2] Budget
+        [3] Schedule
+        [0] Exit
+
+        > 3
+
+        >>> selection  # doctest: +SKIP
+        3
+
+        """
+        print(self)
+        selection = input("> ")
+        print()
+
+        return int(selection)
 
 
 def test():
