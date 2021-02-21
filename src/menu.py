@@ -1,5 +1,4 @@
-"""
-Menu module """
+""" Menu module """
 
 
 class Menu:

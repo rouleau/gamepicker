@@ -1,5 +1,4 @@
-"""
-Menus for command line interface (CLI) """
+""" Menus for command line interface (CLI) """
 
 MAIN = {
     "header": "Welcome to the Espacejeux Game Picker!",

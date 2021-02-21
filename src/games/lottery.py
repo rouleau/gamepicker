@@ -1,5 +1,4 @@
-"""
-Lottery module """
+""" Lottery module """
 
 
 class Astro:

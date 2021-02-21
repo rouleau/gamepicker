@@ -1,7 +1,4 @@
-"""
-Application module
-
-"""
+""" Application module """
 
 
 def main():

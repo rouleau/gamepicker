@@ -1,5 +1,4 @@
-"""
-Data utilities for various formats """
+""" Data utilities for various formats """
 
 import json
 
