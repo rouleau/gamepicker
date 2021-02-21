@@ -9,8 +9,8 @@ def main():
     Main function for the gamepicker application
 
     """
-    from constants.menus import BUDGET, GAMES, SCHEDULE, SCHEDULE_SUB_MENU
-    from interface import menu, menu_exit, menu_invalid
+    from constants.menus import BUDGET, GAMES, MAIN, SCHEDULE, SCHEDULE_SUB_MENU
+    from menu import Menu
     from pool import GamePool
     from schedule import Schedule
     from utilities.data import read_json
@@ -18,8 +18,15 @@ def main():
     # START GAME PICKER
     print()
 
-    # Print MAIN menu and return selection
-    selection = menu()
+    # Create menus
+    main_menu = Menu(MAIN)
+    game_menu = Menu(GAMES)
+    budget_menu = Menu(BUDGET)
+    schedule_menu = Menu(SCHEDULE)
+    schedule_sub_menu = Menu(SCHEDULE_SUB_MENU)
+
+    # Print MAIN menu and get selection
+    selection = main_menu.get_selection()
 
     if selection == 1:  # GAMES
 
@@ -34,8 +41,8 @@ def main():
         game_pool.add_games(instants, "Instant")
         game_pool.add_games(lotteries, "Lottery")
 
-        # Print GAMES menu and return selection
-        selection = menu(GAMES)
+        # Print GAME menu and get selection
+        selection = game_menu.get_selection()
 
         if selection == 1:  # Print Games
 
@@ -55,36 +62,36 @@ def main():
             print()
             print(f"Payoff Rate: {payoff_rate} (randomly selected based on weight)")
 
-        elif selection == 2:  # Print exit message
-            menu_exit()
+        elif selection == 0:  # Print exit message
+            print(game_menu.messages["exit"])
 
-        else:  # Print invalid option message
-            menu_invalid(selection)
+        else:  # Print invalid selection message
+            print(game_menu.messages["invalid"])
 
     elif selection == 2:  # BUDGET
 
         # TODO selections\budget.py
 
-        # Print BUDGET menu and return selection
-        selection = menu(BUDGET)
+        # Print BUDGET menu and get selection
+        selection = budget_menu.get_selection()
 
         if selection == 1:  # Create budget
 
             # TODO Create budget
             print("Creating budget...")
 
-        elif selection == 2:  # Print exit message
-            menu_exit()
+        elif selection == 0:  # Print exit message
+            print(budget_menu.messages["exit"])
 
-        else:  # Print invalid option message
-            menu_invalid(selection)
+        else:  # Print invalid selection message
+            print(budget_menu.messages["invalid"])
 
     elif selection == 3:  # SCHEDULE
 
         # TODO selections\schedule.py
 
-        # Print SCHEDULE menu and return selection
-        selection = menu(SCHEDULE)
+        # Print SCHEDULE menu and get selection
+        selection = schedule_menu.get_selection()
 
         if selection == 1:  # Create Schedule
 
@@ -101,23 +108,23 @@ def main():
             print(f"Total Days: {total_days}")
             print()
 
-            # Print SCHEDULE sub-menu and return selection
-            sub_selection = menu(SCHEDULE_SUB_MENU)
+            # Print SCHEDULE sub-menu and get selection
+            selection = schedule_sub_menu.get_selection()
 
-            if sub_selection == 1:  # Print random dates as objects
+            if selection == 1:  # Print random dates as objects
 
                 # Create and print a list of 30 random date objects
                 random_dates = schedule.random_dates(30)
                 print(random_dates)
 
-            elif sub_selection == 2:  # Print random dates as strings
+            elif selection == 2:  # Print random dates as strings
 
                 # Create and print a list of 30 random date objects as strings
                 random_dates = schedule.random_dates_to_str(30)
                 for random_date in random_dates:
                     print(random_date)
 
-            elif sub_selection == 3:  # Write random dates as strings to CSV file
+            elif selection == 3:  # Write random dates as strings to CSV file
 
                 # Create and write a list of 30 random dates to a CSV file in the
                 # datetime sub-folder of the data folder
@@ -125,23 +132,23 @@ def main():
                 schedule.random_dates_to_csv(30)
                 print("Done!")
 
-            elif sub_selection == 4:  # Print exit message
-                menu_exit()
+            elif selection == 0:  # Print exit message
+                print(schedule_sub_menu.messages["exit"])
 
-            else:  # Print invalid option message
-                menu_invalid(sub_selection)
+            else:  # Print invalid selection message
+                print(schedule_sub_menu.messages["invalid"])
 
-        elif selection == 2:  # Print exit message
-            menu_exit()
+        elif selection == 0:  # Print exit message
+            print(schedule_menu.messages["exit"])
 
-        else:  # Print invalid option message
-            menu_invalid(selection)
+        else:  # Print invalid selection message
+            print(schedule_menu.messages["invalid"])
 
-    elif selection == 4:  # Print exit message
-        menu_exit()
+    elif selection == 0:  # Print exit message
+        print(main_menu.messages["exit"])
 
-    else:  # Print invalid option message
-        menu_invalid(selection)
+    else:  # Print invalid selection message
+        print(main_menu.messages["invalid"])
 
 
 if __name__ == "__main__":
