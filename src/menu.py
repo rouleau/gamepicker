@@ -98,6 +98,26 @@ class Menu:
 
         return int(selection)
 
+    def print_message(self, message: str) -> None:
+        """
+        Print message from dict of self.messages
+
+        >>> MAIN = {
+        ...     "header": "Welcome to Game Picker!",
+        ...     1: "Games",
+        ...     2: "Budget",
+        ...     3: "Schedule",
+        ... }
+        >>> main_menu = Menu(MAIN)
+        >>> main_menu.messages
+        {'exit': 'Goodbye!', 'invalid': 'Selection is invalid... Goodbye!'}
+        >>> main_menu.print_message("invalid")
+        Selection is invalid... Goodbye!
+
+        """
+        message = self.messages[message]
+        print(message)
+
 
 def test():
     """ Test docstrings using doctest """
