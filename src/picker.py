@@ -1,5 +1,7 @@
 """
-Pick module """
+Picker module
+
+"""
 
 
 class Picker:
