@@ -2,7 +2,6 @@
 Game module
 
 """
-
 from datetime import datetime
 
 

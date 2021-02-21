@@ -2,7 +2,6 @@
 Scedule module
 
 """
-
 import csv
 
 from datetime import date, timedelta

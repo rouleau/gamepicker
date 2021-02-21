@@ -5,10 +5,7 @@ Quotidienne 2, Quotidienne 3, Quotidienne 4
 
 
 class Quotidienne:
-    """
-    Baseclass for a Quotidienne lottery ticket.
-
-    """
+    """ Baseclass for a Quotidienne lottery ticket """
 
     def __init__(self) -> None:
         """
@@ -19,7 +16,6 @@ class Quotidienne:
         'Quotidienne'
 
         """
-
         self.name = "Quotidienne"
         self.is_active = True
         self.online = True

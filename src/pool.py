@@ -2,7 +2,6 @@
 Game Pool module
 
 """
-
 import random
 
 from game import InstantGame, LotteryGame

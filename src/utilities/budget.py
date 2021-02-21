@@ -1,6 +1,7 @@
 """
-Budget planner """
+Budget planner
 
+"""
 from random import choice, choices
 
 budget = 100
