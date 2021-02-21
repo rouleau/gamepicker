@@ -1,7 +1,4 @@
-"""
-Quotidienne 2, Quotidienne 3, Quotidienne 4
-
-"""
+""" Quotidienne 2, Quotidienne 3, Quotidienne 4 """
 
 
 class Quotidienne:

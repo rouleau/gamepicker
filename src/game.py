@@ -1,7 +1,5 @@
-"""
-Game module
+""" Game module """
 
-"""
 from datetime import datetime
 
 
@@ -26,7 +24,6 @@ class InstantBet:
         [0.5, 1, 2, 5, 10]
 
         """
-
         self.is_available = None
         self.theoretical_payoff_rate = instant_bet["theoretical_payoff_rate"]
         self.cost = instant_bet["cost"]
@@ -48,7 +45,6 @@ class InstantBet:
         Cost: [0.5, 1, 2, 5, 10]
 
         """
-
         line_1 = f"Available: {self.is_available}\n"
         line_2 = f"Theoretical Payoff Rate: {self.theoretical_payoff_rate}\n"
         line_3 = f"Cost: {self.cost}\n"
@@ -89,7 +85,6 @@ class InstantGame:
          <__main__.InstantBet object at 0x...>]
 
         """
-
         self.name = instant_game["name"]
         self.is_active = instant_game["is_active"]
         self.bets = []
@@ -133,7 +128,6 @@ class InstantGame:
         Cost: [1, 2, 4, 5]
 
         """
-
         line_1 = f"Name: {self.name}\n"
         line_2 = f"Active: {self.is_active}\n"
         line_3 = ""
@@ -172,7 +166,6 @@ class LotteryBet:
         ['Monday', 'Thursday']
 
         """
-
         self.is_available = None
         self.theoretical_payoff_rate = lottery_bet["theoretical_payoff_rate"]
         self.cost = lottery_bet["cost"]
@@ -200,7 +193,6 @@ class LotteryBet:
         Draw Days: ['Monday', 'Thursday']
 
         """
-
         line_1 = f"Available: {self.is_available}\n"
         line_2 = f"Theoretical Payoff Rate: {self.theoretical_payoff_rate}\n"
         line_3 = f"Cost: {self.cost}\n"
@@ -247,7 +239,6 @@ class LotteryGame:
          <__main__.LotteryBet object at 0x...>]
 
         """
-
         self.name = lottery_game["name"]
         self.is_active = lottery_game["is_active"]
         self.bets = []
@@ -311,7 +302,6 @@ class LotteryGame:
         Draw Days: []
 
         """
-
         line_1 = f"Name: {self.name}\n"
         line_2 = f"Active: {self.is_active}\n"
         line_3 = ""

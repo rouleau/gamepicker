@@ -1,7 +1,5 @@
-"""
-Scedule module
+""" Schedule module """
 
-"""
 import csv
 
 from datetime import date, timedelta
@@ -22,7 +20,6 @@ class Schedule:
         [datetime.date(2021, 1, 1), ..., datetime.date(2021, 3, 31)]
 
         """
-
         # Create date objects for first and last day
         first_day = date.fromisoformat(start_date)
         last_day = date.fromisoformat(end_date)
@@ -47,7 +44,6 @@ class Schedule:
         [datetime.date(2021, 1, 1), ..., ..., ..., datetime.date(2021, 3, 31)]
 
         """
-
         dates = self.dates.copy()
 
         # Remove first & last day from list
@@ -75,7 +71,6 @@ class Schedule:
          '2021-04-30 Friday, April 30, 2021']
 
         """
-
         # Create a list of random date objects
         dates = self.random_dates(num_dates)
 
@@ -98,7 +93,6 @@ class Schedule:
         >>> schedule.random_dates_to_csv(30)  # doctest: +SKIP
 
         """
-
         # Create a list of random date objects
         dates = self.random_dates(num_dates)
 

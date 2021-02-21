@@ -1,7 +1,5 @@
-"""
-Game Pool module
+""" Game Pool module """
 
-"""
 import random
 
 from game import InstantGame, LotteryGame
@@ -21,7 +19,6 @@ class GamePool:
         []
 
         """
-
         self.games = []
 
     def __str__(self) -> str:
@@ -91,7 +88,6 @@ class GamePool:
         Draw Days: ['Tuesday', 'Friday']
 
         """
-
         str_repr = ""
 
         # Create a string from all games
@@ -137,7 +133,6 @@ class GamePool:
          <game.LotteryGame object at 0x...>]
 
         """
-
         if category == "Instant":
             self.games = self.games + [InstantGame(game) for game in games]
         elif category == "Lottery":
@@ -179,7 +174,6 @@ class GamePool:
         [0.8705, 0.93]
 
         """
-
         theoretical_payoff_rates = {
             bet.theoretical_payoff_rate for game in self.games for bet in game.bets
         }
@@ -229,7 +223,6 @@ class GamePool:
         0.8705
 
         """
-
         payoff_rates = self.payoff_rates()
         payoff_rate = random.choices(payoff_rates, weights=payoff_rates, k=1)
 

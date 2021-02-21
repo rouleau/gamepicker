@@ -1,7 +1,4 @@
-"""
-Budget module
-
-"""
+""" Budget module """
 
 
 class Budget:
@@ -20,7 +17,6 @@ class Budget:
         'Day'
 
         """
-
         self.balance = balance
         self.period = period
 
@@ -36,7 +32,6 @@ class Budget:
         5.75
 
         """
-
         self.balance = self.balance + amount
 
 
