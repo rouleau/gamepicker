@@ -2,13 +2,13 @@
 
 MAIN = {
     "header": "Welcome to the Espacejeux Game Picker!",
-    1: "Games",
+    1: "Game",
     2: "Budget",
     3: "Schedule",
 }
 
-GAMES = {
-    "header": "GAMES",
+GAME = {
+    "header": "GAME",
     1: "Print games",
 }
 
