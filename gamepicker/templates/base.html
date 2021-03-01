@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+  {% block head %}
+    <title>Game Picker · {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  {% endblock %}
+</head>
+
+<body>
+  <div id="content">
+    {% block content %}{% endblock %}
+  </div>
+  <div id="footer">
+    {% block footer %}
+      <p>Copyright &copy; 2021 Alain Rouleau. All rights reserved.</p>
+    {% endblock %}
+  </div>
+</body>
+
+</html>
