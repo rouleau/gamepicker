@@ -1,0 +1,457 @@
+{
+  "games": [
+    {
+      "name": "Astro",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": true,
+      "draw_days": [],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.4372,
+          "cost": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Banco",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": true,
+      "draw_days": [],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.5,
+          "cost": [
+            1,
+            2,
+            4,
+            5,
+            10,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Banco spécial",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": true,
+      "draw_days": [],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.5017,
+          "cost": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Extra",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": true,
+      "draw_days": [],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.4555,
+          "cost": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Grande Vie",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": false,
+      "draw_days": [
+        "Monday",
+        "Thursday"
+      ],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.49,
+          "cost": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Holiday Towers",
+      "is_active": false,
+      "type": "instant",
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.93,
+          "cost": [
+            0.5,
+            1,
+            2.5,
+            5,
+            10,
+            15,
+            20,
+            25,
+            50
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Home for the Holly-Days",
+      "is_active": true,
+      "type": "instant",
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.8705,
+          "cost": [
+            0.5,
+            1,
+            2,
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "name": "La Mini",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": false,
+      "draw_days": [
+        "Friday"
+      ],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.48,
+          "cost": [
+            0.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lotto :D",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": true,
+      "draw_days": [],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.6259,
+          "cost": [
+            2
+          ]
+        },
+        {
+          "theoretical_payoff_rate": 0.6622,
+          "cost": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lotto 6/49",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": false,
+      "draw_days": [
+        "Wednesday",
+        "Saturday"
+      ],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.47,
+          "cost": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lotto 6/49 Express",
+      "is_active": true,
+      "type": "instant",
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.85,
+          "cost": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lotto Max",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": false,
+      "draw_days": [
+        "Tuesday",
+        "Friday"
+      ],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.48,
+          "cost": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lotto Poker",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": true,
+      "draw_days": [],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.6,
+          "cost": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Merry Multiplier",
+      "is_active": true,
+      "type": "instant",
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.8479,
+          "cost": [
+            3
+          ]
+        },
+        {
+          "theoretical_payoff_rate": 0.85,
+          "cost": [
+            1,
+            2,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mots cachés",
+      "is_active": true,
+      "type": "instant",
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.62,
+          "cost": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mots cachés 50 years",
+      "is_active": false,
+      "type": "instant",
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.64,
+          "cost": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Québec 49",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": false,
+      "draw_days": [
+        "Wednesday",
+        "Saturday"
+      ],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.499,
+          "cost": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Québec Max",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": false,
+      "draw_days": [
+        "Tuesday",
+        "Friday"
+      ],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.47,
+          "cost": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quotidienne 2",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": true,
+      "draw_days": [],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.5,
+          "cost": [
+            0.5,
+            1,
+            1.5,
+            2,
+            2.5,
+            3,
+            4,
+            5,
+            5.5,
+            6,
+            7,
+            10,
+            10.5,
+            11,
+            12,
+            15,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quotidienne 3",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": true,
+      "draw_days": [],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.45,
+          "cost": [
+            0.5,
+            1,
+            1.5,
+            2,
+            2.5,
+            3,
+            4,
+            5,
+            5.5,
+            6,
+            7,
+            10,
+            10.5,
+            11,
+            12,
+            15,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quotidienne 4",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": true,
+      "draw_days": [],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.45,
+          "cost": [
+            0.5,
+            1,
+            1.5,
+            2,
+            2.5,
+            3,
+            4,
+            5,
+            5.5,
+            6,
+            7,
+            10,
+            10.5,
+            11,
+            12,
+            15,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sprinto",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": true,
+      "draw_days": [],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.5818,
+          "cost": [
+            2
+          ]
+        },
+        {
+          "theoretical_payoff_rate": 0.6328,
+          "cost": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tout ou rien",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": true,
+      "draw_days": [],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.5462,
+          "cost": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Triplex",
+      "is_active": true,
+      "type": "lottery",
+      "daily_draw": true,
+      "draw_days": [],
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.578,
+          "cost": [
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}
