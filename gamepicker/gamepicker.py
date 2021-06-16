@@ -13,3 +13,9 @@ import random
 
 from datetime import datetime
 from utilities.data import read_json
+
+# Open and read games file
+games = "..\data\games\games.json"
+games = read_json(games)["games"]
+
+print(games)
