@@ -71,7 +71,7 @@
     },
     {
       "name": "Mots cachés 50 years",
-      "is_active": true,
+      "is_active": false,
       "bets": [
         {
           "theoretical_payoff_rate": 0.64,
