@@ -227,7 +227,7 @@
     },
     {
       "name": "Merry Multiplier",
-      "is_active": true,
+      "is_active": false,
       "type": "instant",
       "bets": [
         {
