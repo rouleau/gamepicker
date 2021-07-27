@@ -274,6 +274,23 @@
       ]
     },
     {
+      "name": "Mots cachés Halloween",
+      "is_active": true,
+      "type": "instant",
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.85,
+          "cost": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
       "name": "Québec 49",
       "is_active": true,
       "type": "lottery",
