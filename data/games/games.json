@@ -67,6 +67,19 @@
       ]
     },
     {
+      "name": "Gagnant à vie",
+      "is_active": true,
+      "type": "instant",
+      "bets": [
+        {
+          "theoretical_payoff_rate": 0.67,
+          "cost": [
+            4
+          ]
+        }
+      ]
+    },
+    {
       "name": "Grande Vie",
       "is_active": true,
       "type": "lottery",
