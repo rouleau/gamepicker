@@ -1,0 +1,20 @@
+# Files
+
+# Python
+__pycache__/
+
+# Virtual Environments
+.venv/
+
+# Tests
+.pytest_cache/
+
+# Data
+
+# Visual Studio Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Notes
